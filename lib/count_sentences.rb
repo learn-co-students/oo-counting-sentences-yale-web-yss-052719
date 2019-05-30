@@ -27,6 +27,7 @@ class String
   end
 
   def count_sentences
-    self.scan(/[^\.!?]+[\.!?]/).map(&:strip).count
+    # self.scan(/[^\.!?]+[\.!?]/).map(&:strip).count
+    self.split(/[.!?]/).reject(&:empty?).count
   end
 end
